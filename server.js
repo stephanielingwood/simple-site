@@ -9,13 +9,19 @@ var quotes = [
 ];
 
 var jokes = [
-	{	setup: 'What did the comedian say when he was hung for bad jokes?',
-		punchline: 'You gotta be chokin\' me.'},
-	{	setup: 'Did you hear about the two peanuts walking into a bar?',
-		punchline: 'One was a-salted.'},
-	{	setup: 'Two men walk into a bar.',
-		punchline: 'Ouch!'}
+	{	'setup': 'What did the comedian say when he was hung for bad jokes?',
+		'punchline': 'You gotta be chokin\' me.'},
+	{	'setup': 'Did you hear about the two peanuts walking into a bar?',
+		'punchline': 'One was a-salted.'},
+	{	'setup': 'Two men walk into a bar.',
+		'punchline': 'Ouch!'}
 ];
+
+app.use(express.static(__dirname + "/app/"));
+
+app.get("/", function(req, res) {
+	res.sendFile('hello.html');
+});
 
 app.get("/joke", function(req, res) {
 	var randomIndex = Math.floor(Math.random() * jokes.length);
@@ -25,10 +31,6 @@ app.get("/joke", function(req, res) {
 app.get('/quote', function(req, res) {
 	var randomIndex = Math.floor(Math.random() * quotes.length);
 	res.send(quotes[randomIndex]);
-});
-
-app.get("/", function(req, res) {
-	res.send("hello universe!");
 });
 
 app.listen(port, function () {
