@@ -1,9 +1,16 @@
-<script>
-function randomFrom(array){return array[Math.floor(Math.random()* array.length)];}
-function buttonPressed(){
-$("#randomText").text(randomFrom(['apple','banana','cherry']));
-}
-var elButton = document.getElementById("superButton");
-elButton.addEventListener("click", buttonPressed, false);
+$(function(){
+	$("button").click(function(){
+		var url = $(this).attr("id");
 
-</script>
+		$.get(url, function (response) {
+			var resText;
+
+			if (typeof response === "object") {
+ 				resText = response.setup + ": " + response.punchline;
+ 			} else {
+ 				resText = response;
+ 			}
+ 		$("#ajax-text").text(resText);
+	 	});
+	});
+});
