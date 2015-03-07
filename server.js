@@ -14,8 +14,11 @@ var jokes = [
 	{setup: "How many tickles does it take to make an octopus laugh?", punchline: "Ten Tickles"}
 ];
 
+//tells express where app files are and to use them
+app.use(express.static(__dirname + "/app/"));
+
 app.get("/", function(req, res) {
-	res.send("hello universe!");
+	res.send(index.html); //telling server the home/ index html page
 });
 
 app.get("/quotes", function(req, res) {
