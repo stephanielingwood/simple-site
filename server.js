@@ -46,7 +46,7 @@ var characters = [
 ];
 
 app.get("/", function(req, res) {
-	res.sendFile('hello.html');
+	res.sendFile('index.html');
 });
 
 app.post("/piglatin", function(req, res) {
