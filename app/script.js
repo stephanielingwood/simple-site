@@ -32,10 +32,8 @@ $(document).ready(function() {
 		var firstname = $("input[name=firstname]").val();
 		var lastname = $("input[name=lastname]").val();
 		var name = { firstname: firstname, lastname: lastname };
-		console.log(name);
 		$.post("piglatin", name, function(response) {
 			var piglatinified = response.firstname + " " + response.lastname;
-			console.log(piglatinified);
 			$("#piglatinified").text(piglatinified);
 		});
 	});

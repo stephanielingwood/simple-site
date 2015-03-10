@@ -53,7 +53,6 @@ app.post("/piglatin", function(req, res) {
 	var firstname = piglatinify(req.body.firstname);
 	var lastname = piglatinify(req.body.lastname);
 	var piglatined = { firstname: firstname, lastname: lastname };
-	console.log(piglatined);
 	res.json(piglatined);
 });
 
