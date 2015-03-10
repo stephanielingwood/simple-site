@@ -1,6 +1,11 @@
 var express = require("express");
 var app = express();
+var bodyparser = require("body-parser");
 var port = process.env.PORT || 3000;
+var piglatinify = require("./lib/piglatinify.js");
+
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended: true}));
 
 app.use(express.static(__dirname + "/app/"));
 
@@ -8,6 +13,7 @@ app.get("/", function(req, res){
 	//res.send("hello, world!");
 	res.sendFile(index.html)
 });
+
 
 
 var quotes = [
