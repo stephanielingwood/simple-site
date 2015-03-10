@@ -14,7 +14,14 @@ app.get("/", function(req, res){
 	res.sendFile(index.html)
 });
 
-
+app.post("/piglatin", function(req, res) {
+	// console.log(req);
+	// console.log(req.body);
+ var firstname = piglatinify(req.body.firstname);
+ var lastname = piglatinify(req.body.lastname);
+ var piglatined = {firstname: firstname, lastname: lastname};
+ res.json(piglatined);
+});
 
 var quotes = [
  "I have not failed. I've just found 10,000 ways that won't work. - Thomas Edison.",

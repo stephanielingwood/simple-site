@@ -14,7 +14,7 @@ $(function(){
 	 	});
 	});
 
-		 		$("#piglatin").on("submit", function(e) {
+		 	$("#piglatin").on("submit", function(e) {
 		 e.preventDefault();
 		var firstname = $('input[name=firstname]').val();
 		var lastname = $('input[name=lastname]').val();
