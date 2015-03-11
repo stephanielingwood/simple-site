@@ -3,17 +3,14 @@ var app = express();
 var bodyparser = require("body-parser");
 var port = process.env.PORT || 3000;
 var piglatinify = require("./lib/piglatinify.js");
+var jokes = require("./lib/jokes.js");
+var characters = require("./lib/characters.js");
+var quotes = require("./lib/quotes.js");
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/app/"));
-
-var quotes = [
- "I have not failed. I've just found 10,000 ways that won't work. - Thomas Edison.",
- "No matter where you go, there you are. ",
- "If it is a good idea, go ahead and do it. It is much easier to apologize than to get permission. - Rear Admiral Grace Hopper, USN, Ph.D"
-];
 
 var jokes = [
 	{
@@ -27,21 +24,6 @@ var jokes = [
 	{
 		"setup": "Two men walk into a bar.",
 		"punchline": "Ouch!"
-	}
-];
-
-var characters = [
-	{
-		"character": "Jean ValJean",
-		"story": "Les Miserables"
-	},
-	{
-		"character": "Atticus Finch",
-		"story": "To Kill A Mockingbird"
-	},
-	{
-		"character": "Sherlock Holmes",
-		"story": "The Adventures of Sherlock Holmes"
 	}
 ];
 

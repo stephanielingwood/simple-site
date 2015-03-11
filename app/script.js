@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	$("button").on("click", function() {
 		var url = $(this).attr("id");
 		$.get(url, function(response) {
