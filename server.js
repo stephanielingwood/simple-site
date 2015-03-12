@@ -2,18 +2,13 @@ var express = require("express"); // expressJS is required
 var app = express();
 var bodyparser = require("body-parser"); //body-parser is required
 var piglatinify = require("./lib/piglatinify.js");
+var randomgenerator = require("./lib/randomGenerator.js");
 var port = process.env.PORT || 3000;
 
 var quotes = [
 	"I have not failed. I've just found 10,000 ways that won't work. -Thomas Edison.",
 	"No matter where you go, there you are.",
 	"If it is a good idea, go ahead and do it. It is much easier to apologize than to get permission. -Rear Admiral Grace Hopper, USN, Ph.D"
-	];
-
-var jokes = [
-	{setup: "What's the difference between a guitar and a fish?", punchline: "You can't tuna fish."},
-	{setup: "What do you get when you cross a cow and a duck?", punchline: "Milk and quackers."},
-	{setup: "How many tickles does it take to make an octopus laugh?", punchline: "Ten Tickles"}
 ];
 
 app.use(bodyparser.json());
@@ -32,8 +27,10 @@ app.get("/quotes", function(req, res) {
 });
 
 app.get("/jokes", function(req, res) {
-	var randomIndex = Math.floor(Math.random() * jokes.length);
-	res.json(jokes[randomIndex]);
+	// var randomIndex = Math.floor(Math.random() * jokes.length);
+	// res.json(jokes[randomIndex]);
+	var jokes = randomgenerator();
+	res.json(jokes);
 });
 
 app.post("/piglatin", function(req, res) {
