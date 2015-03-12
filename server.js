@@ -2,15 +2,13 @@ var express = require("express");
 var app = express();
 var port = process.env.PORT || 3000;
 var bodyparser = require("body-parser");
-// var piglatinify = require("piglatinify.js");
+var piglatinify = require("./lib/piglatinify.js");
 
 app.use(express.static(__dirname + "/app"));
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}));
 
 app.post("/piglatin", function(req, res) {
-  console.log(req);
-  console.log(req.body);
  var firstname = piglatinify(req.body.firstname);
  var lastname = piglatinify(req.body.lastname);
  var piglatined = {firstname: firstname, lastname:
@@ -53,17 +51,3 @@ app.get("/", function(req, res) {
 app.listen(port,function() {
   console.log('server started on port ' + port);
 });
-
-function piglatinify(word) {
-  var wordArray = word.split("");
-  var letters;
-  var changedWord; //pig latinified word we return
-  //is my first letter a vowel?
-  var vowelHash = {a: 1, e: 1, i: 1, o:1, u:1, A: 1,
-  E: 1, I: 1, O: 1, U: 1};
-  if (vowelHash.hasOwnProperty(wordArray[0])) {
-  return word + "-hay";}
-  letters = wordArray.shift();
-  changedWord = wordArray.join("") + "-" + letters + "ay";
-  return changedWord;
-}
