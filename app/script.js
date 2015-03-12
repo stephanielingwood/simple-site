@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
 	$('button').on('click', function() {
 		var url = $(this).attr('id'); //captures the button's id that's clicked
