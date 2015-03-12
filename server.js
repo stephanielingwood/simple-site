@@ -34,16 +34,16 @@ app.get("/jokes", function(req, res) {
 	res.json(jokes);
 });
 
+app.get("/mlbtrivia", function(req, res) {
+	var mlbtrivia = randomtrivia();
+	res.json(mlbtrivia);
+});
+
 app.post("/piglatin", function(req, res) {
 	var firstname = piglatinify(req.body.firstname);
 	var lastname = piglatinify(req.body.lastname);
 	var piglatined = { firstname: firstname, lastname: lastname };
 	res.json(piglatined);
-});
-
-app.post("/mlbtrivia", function(req, res) {
-	var mlbtrivia = randomtrivia();
-	res.json(mlbtrivia);
 });
 
 app.listen(port, function() {
