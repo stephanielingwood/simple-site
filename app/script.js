@@ -8,9 +8,9 @@ $(document).ready(function() {
 
 			/*this if statement looks for whether the response output
 			is an object (JSON). if so, it will format the output
-			accordingly (print the setup and punchline properties*/
+			accordingly (print the setup and answer properties*/
 			if (typeof response === "object") {
-				resText = response.setup + " Answer: " + response.punchline;
+				resText = response.setup + " Answer: " + response.answer;
 			} else {
 				resText = response;
 			}
