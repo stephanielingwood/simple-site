@@ -1,0 +1,557 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"random",
+				"randomIndex"
+			],
+			[
+				"corr",
+				"correctNumArrayCol"
+			],
+			[
+				"num",
+				"numArray3"
+			],
+			[
+				"numArr",
+				"numArray2"
+			],
+			[
+				"sum",
+				"sumArray"
+			],
+			[
+				"baseba",
+				"baseballPlayerArray"
+			],
+			[
+				"lastLetter",
+				"lastLetterSort"
+			],
+			[
+				"base",
+				"baseballPlayerArray"
+			],
+			[
+				"last",
+				"lastLetterSort"
+			],
+			[
+				"array",
+				"arraySorted"
+			],
+			[
+				"string",
+				"stringArray"
+			],
+			[
+				"sort",
+				"sortArrayObjectByLastLetter"
+			],
+			[
+				"arrayObje",
+				"arrayObjectInside"
+			],
+			[
+				"numA",
+				"numArrayCol"
+			],
+			[
+				"sent",
+				"sentenceArray"
+			],
+			[
+				"lastL",
+				"lastLetterArray"
+			],
+			[
+				"penguinList",
+				"penguinListItem1"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"hours",
+				"hoursToOoze"
+			],
+			[
+				"people",
+				"peoplePerHour"
+			],
+			[
+				"homerun",
+				"homerunPotential"
+			],
+			[
+				"per",
+				"perLiter"
+			],
+			[
+				"backg",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 1755,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jonathan/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 511,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/script.js",
+			"settings":
+			{
+				"buffer_size": 574,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 461,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/jonathan/.config/sublime-text-2/Packages/User/Side Bar.sublime-settings",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jonathan/.config/sublime-text-2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 1058,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jonathan/.config/sublime-text-2/Packages/User/openinbrowser.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 96.0,
+		"selected_items":
+		[
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Add Repository"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jonathan/Documents/web_dev/codefellows/f2js/lab-3/simple-site/test.js",
+		"/home/jonathan/Documents/web_dev/codefellows/f2js/lab-3/simple-site/app/index.html",
+		"/home/jonathan/Documents/web_dev/codefellows/jsda/entranceCodeChallenge.js",
+		"/home/jonathan/Documents/web_dev/tutorials/program.js",
+		"/home/jonathan/Documents/web_dev/codefellows/f2js/lab-3/simple-site/package.json",
+		"/home/jonathan/Documents/web_dev/codefellows/f2js/lab-3/simple-site/app/script.js",
+		"/home/jonathan/Documents/web_dev/codefellows/f2js/lab-2/feb-lab2-adv-track/lab2.js",
+		"/home/jonathan/Documents/web_dev/codefellows/f2js/lab-3/simple-site/server.js",
+		"/home/jonathan/Documents/web_dev/codefellows/f2js/lab-3/myapp.html",
+		"/home/jonathan/Documents/web_dev/codefellows/f2js/lab-3/app.js",
+		"/home/jonathan/Documents/web_dev/lab-2/feb-lab2-adv-track/lab2.js",
+		"/home/jonathan/Documents/web_dev/lab-2/feb-lab2-adv-track/lab2test.js",
+		"/home/jonathan/.config/sublime-text-2/Packages/User/openinbrowser.sublime-settings",
+		"/home/jonathan/Documents/web_dev/class-5/class5quiz.js",
+		"/home/jonathan/Documents/web_dev/class-5/class5quiz.html",
+		"/home/jonathan/Documents/web_dev/class-5/penguin-palooza/penguin-palooza.html",
+		"/home/jonathan/Documents/web_dev/class-5/penguin-palooza/penguin-palooza.css",
+		"/home/jonathan/Documents/web_dev/class-5/class5.js",
+		"/home/jonathan/Documents/web_dev/class-5/penguin-palooza/penguin-palooza.js",
+		"/home/jonathan/Documents/web_dev/lab-2/feb-lab2-beg-track/lab2.js",
+		"/home/jonathan/Documents/web_dev/notes/this.html",
+		"/home/jonathan/Documents/web_dev/notes/this.js",
+		"/home/jonathan/Documents/web_dev/notes/theDom.js",
+		"/home/jonathan/Dropbox/dev.avantalarm/js/app.js",
+		"/home/jonathan/Dropbox/dev.avantalarm/css/style.css",
+		"/home/jonathan/Dropbox/dev.avantalarm/index.html",
+		"/home/jonathan/Documents/web_dev/class-4/class4.js",
+		"/home/jonathan/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/jonathan/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/jonathan/Documents/web_dev/class-3/index.html",
+		"/home/jonathan/Documents/web_dev/class-3/hoisting.js",
+		"/home/jonathan/Documents/web_dev/class-3/hoisting.html",
+		"/home/jonathan/Documents/web_dev/class-3/test.js",
+		"/home/jonathan/Documents/web_dev/class-3/context.js",
+		"/home/jonathan/Documents/web_dev/class-3/closures.js",
+		"/home/jonathan/Documents/web_dev/class-3/eventDrivenEnvironment.js",
+		"/home/jonathan/Documents/web_dev/class-3/firstClassFunction.js",
+		"/home/jonathan/Documents/web_dev/lab1-beg-track/lab1.js",
+		"/home/jonathan/Documents/web_dev/lab1-adv-track/lab1.js",
+		"/home/jonathan/Documents/web_dev/lab1-adv-track/README.md",
+		"/home/jonathan/.bashrc"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"				",
+			"			",
+			"browser"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "server.js",
+					"settings":
+					{
+						"buffer_size": 1755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								956,
+								956
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 374.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/jonathan/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+					"settings":
+					{
+						"buffer_size": 511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								505,
+								505
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "app/script.js",
+					"settings":
+					{
+						"buffer_size": 574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								537,
+								537
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								281
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/jonathan/.config/sublime-text-2/Packages/User/Side Bar.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/jonathan/.config/sublime-text-2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 1058,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								453,
+								453
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 102.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/jonathan/.config/sublime-text-2/Packages/User/openinbrowser.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.474074074074,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

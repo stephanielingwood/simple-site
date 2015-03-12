@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Random String From Array Generator</title>
+	</head>
+	<body>
+		<button id="quotes">Get a Quote</button>
+		<button id="jokes">Make me laugh</button>
+		<button id="characters">Get Me a Literary Character</button>
+		<p id="ajax-text"></p>
+
+		<h3>Your Daily Literary Character For The Day Is: </h3>
+		<p id="daily-character"></p>
+		<h2>Piglatin-ify your name now!</h2>
+		<form id="piglatin" method="POST">
+			<label for="firstname">First Name</label>
+			<input type="text" name="firstname" id="firstname">
+			<label for="lastname">Last Name</label>
+			<input type="text" name="lastname" id="lastname">
+			<input type="submit" value="Piglatinify It">
+		</form>
+		<h3>Your name in Pig Latin is: </h3>
+		<p id="piglatinified"></p>
+		<h2>Spanglish Translator</h2>
+		<form id="spanglish" method="POST">
+			<label for="textInput">Write a sentence here.</label>
+			<textarea name="textInput" id="textInput"></textarea>
+			<input type="submit" value="Get Your Spanglish Here">
+		</form>
+		<h3>Your Sentence in Spanglish is:</h3>
+		<p id="spanglished"></p>
+
+
+	</body>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</html>
