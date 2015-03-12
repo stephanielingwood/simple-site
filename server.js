@@ -6,6 +6,7 @@ var piglatinify = require("./lib/piglatinify.js");
 var jokes = require("./lib/jokes.js");
 var characters = require("./lib/characters.js");
 var quotes = require("./lib/quotes.js");
+var spanglish = require("./lib/spanglish.js");
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
@@ -21,6 +22,12 @@ app.post("/piglatin", function(req, res) {
 	var lastname = piglatinify(req.body.lastname);
 	var piglatined = { firstname: firstname, lastname: lastname };
 	res.json(piglatined);
+});
+
+app.post("/spanglish", function(req, res) {
+	var modifiedSentence = spanglish(req.body.sentenceInput);
+	var spanglishObject = { spanglishSentence: modifiedSentence };
+	res.json(spanglishObject);
 });
 
 app.get("/jokes", function(req, res) {

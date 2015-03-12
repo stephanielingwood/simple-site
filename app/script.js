@@ -29,7 +29,13 @@ $(document).ready(function() {
 			$("#piglatinified").text(piglatinified);
 		});
 	});
-	$("#").on("submit", function(e) {
-		e.preventdefault();
+	$("#spanglish").on("submit", function(e) {
+		e.preventDefault();
+		var sentenceInput = $("textarea[name=textInput]").val();
+		var sentenceSent = { sentenceInput: sentenceInput };
+		$.post("spanglish", sentenceSent, function(response) {
+			var spanglished = response.spanglishSentence;
+			$("#spanglished").text(spanglished);
+		});
 	});
 });
