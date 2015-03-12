@@ -48,7 +48,7 @@ $(document).ready(function() {
 
 		$.post('madlib', userinput, function(response) {
 			var madlibgame = "The " + response.noun + ", drunk or stupefied, " + response.verbEd + " the rim of the rain barrel. I didn't " + response.verb + " why it walked around and around: a " + response.noun2 + ". I filled " + response.adjective + " bucket and left it to its " + response.verbIng + ".";
-			$('#madlibgame').text(madlibgame);
+			$('#madlibigame').text(madlibgame);
 		});//end post method
 	});// end madlib form submit event
 
