@@ -29,4 +29,7 @@ $(document).ready(function() {
 			$("#piglatinified").text(piglatinified);
 		});
 	});
+	$("#").on("submit", function(e) {
+		e.preventdefault();
+	});
 });

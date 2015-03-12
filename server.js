@@ -15,7 +15,7 @@ app.use(express.static(__dirname + "/app/"));
 var jokes = [
 	{
 		"setup": "What did the comedian say when he was hung for bad jokes?",
-		"punchline": "You gotta be chokin\" me."
+		"punchline": "You gotta be chokin\' me."
 	},
 	{
 		"setup": "Did you hear about the two peanuts walking down the street?",
