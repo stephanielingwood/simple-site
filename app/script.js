@@ -3,7 +3,7 @@ $(document).ready(function() {
 		var url = $(this).attr("id");
 		$.get(url, function(response) {
 			var resText;
-			if (typeof response === "object" && url == "joke") {
+			if (typeof response === "object" && url == "jokes") {
 				resText = response.setup + ": " + response.punchline;
 			} else if (typeof response === "object" && url == "characters") {
 				resText = response.character + " is a character from " + response.story;

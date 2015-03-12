@@ -12,21 +12,6 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/app/"));
 
-var jokes = [
-	{
-		"setup": "What did the comedian say when he was hung for bad jokes?",
-		"punchline": "You gotta be chokin\' me."
-	},
-	{
-		"setup": "Did you hear about the two peanuts walking down the street?",
-		"punchline": "One was a-salted."
-	},
-	{
-		"setup": "Two men walk into a bar.",
-		"punchline": "Ouch!"
-	}
-];
-
 app.get("/", function(req, res) {
 	res.sendFile("index.html");
 });
@@ -38,19 +23,16 @@ app.post("/piglatin", function(req, res) {
 	res.json(piglatined);
 });
 
-app.get("/joke", function(req, res) {
-	var randomIndex = Math.floor(Math.random() * jokes.length);
-	res.json(jokes[randomIndex]);
+app.get("/jokes", function(req, res) {
+	res.json(jokes());
 });
 
-app.get("/quote", function(req, res) {
-	var randomIndex = Math.floor(Math.random() * quotes.length);
-	res.send(quotes[randomIndex]);
+app.get("/quotes", function(req, res) {
+	res.json(quotes());
 });
 
 app.get("/characters", function(req, res) {
-	var randomIndex = Math.floor(Math.random() * characters.length);		// Creates a variable that is a random integer coinciding with the length of the characters JSON array
-	res.json(characters[randomIndex]);									// Gets a random object out of the JSON array we created above
+	res.json(characters());
 });
 
 app.listen(port, function() {
