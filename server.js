@@ -5,6 +5,7 @@ var port = process.env.PORT || 3000;
 var piglatinify = require("./lib/piglatinify.js");
 var jokeLib = require("./lib/jokes.js");
 var quoteLib = require("./lib/quote.js");
+var batAvgLib = require("./lib/battingAverage.js");
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}));
@@ -25,6 +26,9 @@ app.post("/piglatin", function(req, res) {
  res.json(piglatined);
 });
 
+app.post("/morseCode", function (req, res) {
+console.log (word.toUpperCase())
+})
 
 app.get("/quote", function (req, res){
  // var randomIndex = Math.floor(Math.random()*quotes.length);
@@ -38,6 +42,19 @@ app.get("/joke", function(req, res) {
  var jokeGen = jokeLib();
  res.json(jokeGen);
 });
+
+app.get("/battingAvg", function(req, res) {
+ // var randomIndex = Math.floor(Math.random()*jokes.length);
+ var avgGen = batAvgLib();
+ res.json(avgGen);
+});
+
+
+ 
+// </script>
+// app.post("/rotate", function (req, res) {
+
+// }
 
 app.listen(port, function(){
 	console.log("server started on port " + port);
