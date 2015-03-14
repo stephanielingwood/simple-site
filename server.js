@@ -6,6 +6,7 @@ var piglatinify = require("./lib/piglatinify.js");
 var jokeLib = require("./lib/jokes.js");
 var quoteLib = require("./lib/quote.js");
 var batAvgLib = require("./lib/battingAverage.js");
+var morseCodify = require("./lib/morsecodify.js");
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}));
@@ -27,7 +28,8 @@ app.post("/piglatin", function(req, res) {
 });
 
 app.post("/morseCode", function (req, res) {
-console.log (word.toUpperCase())
+	var mc = morseCode(req.body.convertify);
+console.log(mc);
 })
 
 app.get("/quote", function (req, res){

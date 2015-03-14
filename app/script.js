@@ -41,7 +41,10 @@ $(function(){
 		
 $("#morseCode").on("submit", function(e) {
 		 e.preventDefault();
-	var changed = $("#morseCodified").text(morseCodified);
-
+	var morseCodeOutput= $('input[convertify]').val();
+		$.post("morseCode", morseCodeOutput, function(response){
+			var morseCodified = response.convertify;
+			var changed = $(#morseCodified).text(morseCodified);
+		});
 	});
 });
