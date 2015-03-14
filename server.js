@@ -14,50 +14,39 @@ app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/app/"));
 
 app.get("/", function(req, res){
-	//res.send("hello, world!");
 	res.sendFile(index.html)
 });
 
 app.post("/piglatin", function(req, res) {
-	// console.log(req);
-	// console.log(req.body);
- var firstname = piglatinify(req.body.firstname);
- var lastname = piglatinify(req.body.lastname);
- var piglatined = {firstname: firstname, lastname: lastname};
+ var plFirstname = piglatinify(req.body.firstname);
+ var plLastname = piglatinify(req.body.lastname);
+ var piglatined = {firstname: plFirstname, lastname: plLastname};
  res.json(piglatined);
 });
 
 app.post("/morseCode", function (req, res) {
-	var mc = morseCode(req.body.convertify);
-console.log(mc);
-})
+console.log("server.js says: ");
+console.log(req.body);
+var mc = morseCodify(req.body.textToConvert);
+var morseConverted = {converted: mc};
+res.json(morseConverted);
+});
 
 app.get("/quote", function (req, res){
- // var randomIndex = Math.floor(Math.random()*quotes.length);
  var quoteSend = quoteLib();
  res.send(quoteSend);
 });
 
-
 app.get("/joke", function(req, res) {
- // var randomIndex = Math.floor(Math.random()*jokes.length);
  var jokeGen = jokeLib();
  res.json(jokeGen);
 });
 
 app.get("/battingAvg", function(req, res) {
- // var randomIndex = Math.floor(Math.random()*jokes.length);
  var avgGen = batAvgLib();
  res.json(avgGen);
 });
-
-
  
-// </script>
-// app.post("/rotate", function (req, res) {
-
-// }
-
 app.listen(port, function(){
 	console.log("server started on port " + port);
 });
