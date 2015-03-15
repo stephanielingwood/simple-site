@@ -4,7 +4,7 @@ var bodyparser = require("body-parser"); //body-parser is required
 var piglatinify = require("./lib/piglatinify.js");
 var randomgenerator = require("./lib/randomGenerator.js");
 var randomtrivia = require("./lib/mlbTrivia.js");
-var madlibgame = require("./lib/madlibgame.js");
+var ubbidubbify = require("./lib/ubbidubbi.js");
 var port = process.env.PORT || 3000;
 
 var quotes = [
@@ -47,9 +47,10 @@ app.post("/piglatin", function(req, res) {
 	res.json(piglatined);
 });
 
-app.post("/madlib", function(req, res) {
-	var test = madlibgame();
-	res.json(test);
+app.post("/ubbidubbi", function(req, res) {
+	var userinput = ubbidubbify(req.body.userinput);
+	var ubbi = { userinput: userinput };
+	res.json(ubbi);
 });
 
 app.listen(port, function() {

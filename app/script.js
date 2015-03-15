@@ -34,22 +34,17 @@ $(document).ready(function() {
 		}); //end post method
 	}); // end piglatin form submit event
 
-	$('#madlib').on('submit', function(e) {
+	$('#ubbidubbi').on('submit', function(e) {
 		e.preventDefault();
 
-		var noun = $('input[name=noun]').val();
-		var verbEd = $('input[name=verb_ed]').val();
-		var verb = $('input[name=verb]').val();
-		var noun2 = $('input[name=noun2]').val();
-		var adjective = $('input[name=adjective]').val();
-		var verbIng = $('input[name=verb_ing]').val();
-		var userinput = { noun: noun, verbEd: verbEd, verb: verb, noun2: noun2, adjective: adjective, verbIng: verbIng };
-		console.log(userinput);
+		var userInput = $('input[name=string]').val();
+		var translate = { userinput: userInput };
+		console.log(translate); //make sure it works
 
-		$.post('madlib', userinput, function(response) {
-			var madlibgame = "The " + response.noun + ", drunk or stupefied, " + response.verbEd + " the rim of the rain barrel. I didn't " + response.verb + " why it walked around and around: a " + response.noun2 + ". I filled " + response.adjective + " bucket and left it to its " + response.verbIng + ".";
-			$('#madlibigame').text(madlibgame);
+		$.post('ubbidubbi', translate, function(response) {
+			var ubbidubbified = response.userinput;
+			$('#ubbidubbified').text(ubbidubbified);
 		});//end post method
-	});// end madlib form submit event
+	});//end ubbi dubbi translator form submit
 
 }); // end on ready
