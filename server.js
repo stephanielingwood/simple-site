@@ -1,8 +1,8 @@
 var express = require("express");
 var app = express();
 var bodyparser = require("body-parser");
-var __ = require("lodash");
-// var __app = lodash();
+// var __ = require("lodash");
+// // var __app = lodash();
 var port = process.env.PORT || 3000;
 var piglatinify = require("./lib/piglatinify.js");
 var jokeLib = require("./lib/jokes.js");
