@@ -1,0 +1,35 @@
+<!-- This is the webpage that will use the data endpoints that were created in the server
+ -->
+
+<html>
+  <head>
+    <!-- <link rel="stylesheet" type="text/css" href="random-string.css" /> -->
+     <title>The Generator</title>
+  </head>
+  <body>
+    <h3> Click the various buttons to generate random strings.</h3>
+     <button id="quotes">Give me a quote!</button>
+     <button id="jokes">Make me laugh!</button>
+     <button id="translator">Teach me spanish!</button>
+    <p> Below is the randomly generated string. </p>
+    <p id="ajax-text"> </p>
+    <p>Piglatinify your name now!</p>
+
+    <form id="piglatin">
+    <label>First Name</label><input type="text"
+    name="firstname">
+    <label>Last Name</label><input type="text"
+    name="lastname">
+    <input type="submit" value="Piglatinify It"/>
+    </form>
+    <p>Your name in Pig Latin is:</p>
+    <p id="piglatinified"></p>
+
+
+
+    <!-- include jQuery here -->
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- include your external js file here -->
+     <script src="script.js"></script>
+  </body>
+</html>
