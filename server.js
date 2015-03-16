@@ -1,12 +1,19 @@
 var express = require("express");
 var app = express();
 var bodyparser = require("body-parser");
+var __ = require("lodash");
+// var __app = lodash();
 var port = process.env.PORT || 3000;
 var piglatinify = require("./lib/piglatinify.js");
 var jokeLib = require("./lib/jokes.js");
 var quoteLib = require("./lib/quote.js");
 var batAvgLib = require("./lib/battingAverage.js");
 var morseCodify = require("./lib/morsecodify.js");
+
+app.use(function (req, res, next) {
+    res.set('X-Clacks-Overhead', 'GNU Terry Pratchet');
+    next();
+});  //tribute to Terry Pratchet, keep him alive in the "clacks"
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}));
