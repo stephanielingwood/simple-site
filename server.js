@@ -10,36 +10,36 @@ var quoteLib = require("./lib/quote.js");
 var batAvgLib = require("./lib/battingAverage.js");
 var morseCodify = require("./lib/morsecodify.js");
 
-app.use(function (req, res, next) {
-    res.set('X-Clacks-Overhead', 'GNU Terry Pratchet');
+app.use(function(req, res, next) {
+    res.set("X-Clacks-Overhead", "GNU Terry Pratchet");
     next();
 });  //tribute to Terry Pratchet, keep him alive in the "clacks"
 
 app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({extended: true}));
+app.use(bodyparser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/app/"));
 
-app.get("/", function(req, res){
-	res.sendFile(index.html)
+app.get("/", function(req, res) {
+	res.sendFile(index.html);
 });
 
 app.post("/piglatin", function(req, res) {
  var plFirstname = piglatinify(req.body.firstname);
  var plLastname = piglatinify(req.body.lastname);
- var piglatined = {firstname: plFirstname, lastname: plLastname};
+ var piglatined = { firstname: plFirstname, lastname: plLastname };
  res.json(piglatined);
 });
 
-app.post("/morseCode", function (req, res) {
+app.post("/morseCode", function(req, res) {
 console.log("server.js says: ");
 console.log(req.body);
 var mc = morseCodify(req.body.textToConvert);
-var morseConverted = {converted: mc};
+var morseConverted = { converted: mc };
 res.json(morseConverted);
 });
 
-app.get("/quote", function (req, res){
+app.get("/quote", function(req, res) {
  var quoteSend = quoteLib();
  res.send(quoteSend);
 });
@@ -53,9 +53,7 @@ app.get("/battingAvg", function(req, res) {
  var avgGen = batAvgLib();
  res.json(avgGen);
 });
- 
-app.listen(port, function(){
+
+app.listen(port, function() {
 	console.log("server started on port " + port);
 });
-
-
