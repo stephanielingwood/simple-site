@@ -1,78 +1,47 @@
 // //Quiz 5
-// $(function() {
-//  $("button").click(function() {
-//  var url = $(this).attr("id");
-//  $.get(url, function(response) {
-//  var resText;
-//  if (typeof response === "object") {
-//  resText = response.setup + ": " + response.punchline;
-//  } else {
-//  resText = response;
-//  }
-//  $("#ajax-text").text(resText);
-//  });
-//  });
-// });
 
-var stringArray = ["Fifty", "Shades", "Of", "Grey"];
-
-$(document).ready(function() {
-  $("#myButton").click(function() {
-    randomString(stringArray);
-  });
+$(function() {
+ $("button#joke").click(function() {
+ $.get("./joke", function(response) {
+ var joke = response.setup + " ... " + response.punchline;
+ $("body").text(joke);
+ });
+ });
 });
 
-function randomString(arr) {
-  alert(arr[Math.floor(Math.random()*4)]);
-}
+$(function() {
+ $("button#quote").click(function() {
+ $.get("./quote", function(response) {
+ $("body").text(response);
+ });
+ });
+});
 
-// $(function() {
-//  $("button").click(function() {
-//  $("#ajax-text").text("hello, world");
-//  });
-// });
-
-// $.get("http://localhost:3000/quote", function (response) {
-//  $("body").text(response);
-// });
-
-// $(function() {
-//  $("button").click(function() {
-//  $.get("http://localhost:3000/quote", function(response) {
-//  $("#ajax-text").text(response);
-//  });
-//  });
-// });
-
-// $(function() {
-//  $("button").click(function() {
-//  var url = $(this).attr("id");
-//  $.get(url, function(response) {
-//  var resText;
-//  if (typeof response === "object") {
-//  resText = response.setup + ": " + response.punchline;
-//  } else {
-//  resText = response;
-//  }
-//  $("#ajax-text").text(resText);
-//  });
-//  });
-// });
-
-//***************************************************************
+$(function() {
+ $("button#random").click(function() {
+ $.get("./random", function(response) {
+ $("body").text(response);
+ });
+ });
+});
 
 $("#piglatin").on("submit", function(e) {
   e.preventDefault();
-  var firstname = $('input[name=firstname]').val();
-  var lastname = $('input[name=lastname]').val();
-  var name = {firstname: firstname, lastname: lastname};
+  var firstname = $("input[name=firstname]").val();
+  var lastname = $("input[name=lastname]").val();
+  var name = { firstname: firstname, lastname: lastname };
   $.post("piglatin", name, function(response) {
  var piglatinified = response.firstname + " " +
  response.lastname;
  $("#piglatinified").text(piglatinified);
-
  });
-
 });
 
-
+$("#randomLetters").on("submit", function(e) {
+  e.preventDefault();
+  var numberEntry = $("input[name=numberEntry]").val();
+  $.post("randomLetters", numberEntry, function(response) {
+ var descrambled = response[0] + response[0];
+ $("#descrambled").text(descrambled);
+ });
+});
