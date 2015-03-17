@@ -54,6 +54,6 @@ app.post("/piglatin", function(req, res) {
 
 // Poste for devowel form
 app.post("/devowel", function(req, res) {
-  var devoweled = devowel(req.body.thestring);
+  var devoweled = devowel(req.body.Vowels);
   res.json(devoweled);
 });

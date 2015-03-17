@@ -44,6 +44,7 @@ $("#piglatin").on("submit", function(e) {
  var firstname = $("input[name=firstname]").val();
  var lastname = $("input[name=lastname]").val();
  var name = { firstname: firstname, lastname: lastname };
+ console.log(name)
  // Submit the obtained data via a post request
 $.post("piglatin", name, function(response) {
  var piglatinified = response.firstname + " " +
@@ -59,9 +60,10 @@ $.post("piglatin", name, function(response) {
 $("#devowel").on("submit", function(e) {
   e.preventDefault();
   var random = $("input[name=randomword]").val();
-  var form = { thestring: random };
+  var form = { Vowels: random, Count: 0 };
+  console.log(form)
   $.post("devowel", form, function(response) {
-    var devoweled = "The word without vowels is: " + response.Voweless + " and the number of vowels removed is: " + response.Count;
+    var devoweled = "The word without vowels is: \"" + response.Voweless + "\" and the number of vowels removed is: " + response.Count;
     $("#devoweled").text(devoweled);
   });
 });
