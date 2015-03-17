@@ -1,6 +1,5 @@
 var express = require("express");
 var app = express();
-// var _ = require("lodash");
 var port = process.env.PORT || 3000;
 var bodyparser = require("body-parser");
 var piglatinify = require("./lib/piglatinify.js");
