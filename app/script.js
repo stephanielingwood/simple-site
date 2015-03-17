@@ -32,7 +32,7 @@ $(function() { //start a jQuery function
 		var firstname = $("input[name=firstname]").val(); //creates a variable called firstname and extracts the value from the location
 														  // of the "firstname" input field
 		var lastname = $("input[name=lastname]").val();   // same as above
-		var name = { irstname: firstname, lastname: lastname }; // creates a variable "name" and creates a json object using the firstname and lastname variables
+		var name = { firstname: firstname, lastname: lastname }; // creates a variable "name" and creates a json object using the firstname and lastname variables
 			$.post("piglatin", name, function(response) { //sends info to the server about the "piglatin" form, and passes "name" through fucntion which does the "response" action
 		 var piglatinified = response.firstname + " " +
 		 response.lastname;  //the variable piglatinified is the responses for both firstname and lastname with a space between
