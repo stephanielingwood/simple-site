@@ -11,7 +11,7 @@ var bodyparser = require("body-parser"); // Automatically parses JSON data
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
-var piglatinify = require("./lib/piglatinify.js");
+var piglatinify = require("./lib/piglatining.js");
 var jokes = require("./lib/jokes.js");
 var translator = require("./lib/translator.js");
 var quotes = require("./lib/quotes.js");
@@ -43,13 +43,13 @@ app.get("/translator", function(req, res) {
 
 //Post request for a form, needed route
 app.post("/piglatin", function(req, res) {
- //console.log("piglatin")
- //console.log(req.body)
  var firstname = piglatinify(req.body.firstname); // Parser works here
  var lastname = piglatinify(req.body.lastname);
  var piglatined = { firstname: firstname, lastname:
  lastname };
  res.json(piglatined);
+
+
 });
 
 // Poste for devowel form

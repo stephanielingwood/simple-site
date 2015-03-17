@@ -39,16 +39,21 @@ $("#piglatin").on("submit", function(e) {
   //The e.preventDefault() keeps the page from refreshing when the
   //form is submitted.
  e.preventDefault();
+ if ($("input[name=firstname]").val() !== "" && $("input[name=lastname]").val() !== "") {
+
  var firstname = $("input[name=firstname]").val();
  var lastname = $("input[name=lastname]").val();
  var name = { firstname: firstname, lastname: lastname };
-
-// Submit the obtained data via a post request
+ // Submit the obtained data via a post request
 $.post("piglatin", name, function(response) {
  var piglatinified = response.firstname + " " +
  response.lastname;
  $("#piglatinified").text(piglatinified);
 });
+} else {
+   $("#piglatinified").text("Enter both a last and first name, please.");
+}
+
 });
 
 $("#devowel").on("submit", function(e) {
